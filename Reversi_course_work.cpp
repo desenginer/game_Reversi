@@ -18,7 +18,7 @@
 
 //Оценочная функция состояния
 int grade(int (*board)[10]) //в функцию передаётся массив, в  
-{						       //каждой ячейке которого состояние 
+{					//каждой ячейке которого - состояние 
 	int result {};		       //соответствующей клетки игрового поля
 	int white {};		   //0 - клетка пустая, 1-белая фишка,
 	int black {};		   //2 - чёрная фишка
@@ -414,7 +414,7 @@ int numOption(int(*board)[10], bool player)
 	}
 	return count;
 }
-
+//Основная функция для работы "Бота"
 int minmax(int(*board)[10], int lavel, int alpha, int beta)
 {
 	if (numOption(board, lavel % 2) == 0 || lavel == 6) return grade(board); 
